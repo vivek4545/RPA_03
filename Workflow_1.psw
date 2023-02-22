@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Workflow_1</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>&#x2f;</directory>
+    <parameters>
+      <parameter>
+        <name>Header1</name>
+        <description>Des_Header1</description>
+        <type>String</type>
+        <uiControlType>TextBox</uiControlType>
+        <list_of_values/>
+        <valueSeparator/>
+        <default_value/>
+        <secret>N</secret>
+        <optional>N</optional>
+        <runtime>N</runtime>
+      </parameter>
+    </parameters>
+    <parameterConfiguration>
+      <grouping>
+      </grouping>
+    </parameterConfiguration>
+    <ps_variables>
+    </ps_variables>
+    <logging_table>
+    </logging_table>
+    <size_rowset>10000</size_rowset>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2022&#x2f;07&#x2f;23 22&#x3a;32&#x3a;08.757</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2022&#x2f;07&#x2f;28 14&#x3a;03&#x3a;28.593</modified_date>
+	<key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <groups>
+  </groups>
+  <order>
+    <hop>
+      <from>Start Browser</from>
+      <to>Web Set Delay 1</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web Set Delay 1</from>
+      <to>Web DropDown Selection</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web DropDown Selection</from>
+      <to>Robot Handling</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Robot Handling</from>
+      <to>Web DropDown Selection 2</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web DropDown Selection 2</from>
+      <to>Robot Handling 1</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Robot Handling 1</from>
+      <to>Web DropDown Selection 3</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web DropDown Selection 3</from>
+      <to>Web Click</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web Click</from>
+      <to>Web Set Delay</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web Set Delay</from>
+      <to>Web URL Navigation</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web URL Navigation</from>
+      <to>Web Actions 2</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web Actions 2</from>
+      <to>Get File Names</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+  </order>
+  <step>
+    <name>Robot Handling</name>
+    <type>RobotHandling</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <multiple>N</multiple>
+      <setTextFields>        <field>          <eventList>Keyboard</eventList>
+          <events/>
+          <value>Tab</value>
+        </field>      </setTextFields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Robot Handling 1</name>
+    <type>RobotHandling</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <multiple>N</multiple>
+      <setTextFields>        <field>          <eventList>Keyboard</eventList>
+          <events/>
+          <value>Tab</value>
+        </field>      </setTextFields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Start Browser</name>
+    <type>BeginStep</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <browser>Google Chrome</browser>
+      <ignoreIeProtectedModeSettings>N</ignoreIeProtectedModeSettings>
+      <url>https&#x3a;&#x2f;&#x2f;www.bseindia.com&#x2f;eqstreamer&#x2f;StreamerMarketwatch.html&#x3f;flag&#x3d;3</url>
+      <delay>0</delay>
+      <maximize>Y</maximize>
+      <startNode>Y</startNode>
+      <notif>Y</notif>
+      <driverName>BROWSER1</driverName>
+      <pageLoadTime>0</pageLoadTime>
+      <retryCount>0</retryCount>
+      <defaultDownloadDirectory/>
+      <clearBrowser>Y</clearBrowser>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web Click</name>
+    <type>ClickStep</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <criteria>X-Path</criteria>
+      <clickoptions>NormalClick</clickoptions>
+      <value>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;btndwnload&#x22;&#x5d;</value>
+      <multiple>N</multiple>
+      <index>0</index>
+      <driverName>BROWSER1</driverName>
+      <numberOfClicks>1</numberOfClicks>
+    <criteriaAttributes>
+      <item>
+        <criteria>X-Path</criteria>
+        <criteriaValue>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;btndwnload&#x22;&#x5d;</criteriaValue>
+      </item>
+      <item>
+        <criteria>Y Co-ordinate</criteria>
+        <criteriaValue>444</criteriaValue>
+      </item>
+      <item>
+        <criteria>X Co-ordinate</criteria>
+        <criteriaValue>1855</criteriaValue>
+      </item>
+      <item>
+        <criteria>Link Text</criteria>
+        <criteriaValue>&#x3c;i class&#x3d;&#x22;fa fa-download iconfont&#x22; style&#x3d;&#x22;&#x22;&#x3e;&#x3c;&#x2f;i&#x3e;</criteriaValue>
+      </item>
+      <item>
+        <criteria>Class Name</criteria>
+        <criteriaValue>btn btn-primary glyphicon-glyphicon-save-file</criteriaValue>
+      </item>
+      <item>
+        <criteria>Id</criteria>
+        <criteriaValue>btndwnload</criteriaValue>
+      </item>
+      <item>
+        <criteria>Tag Name</criteria>
+        <criteriaValue>A</criteriaValue>
+      </item>
+      <item>
+        <criteria>CSS Selector</criteria>
+        <criteriaValue>html&#x3e;body&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;ul&#x3e;li&#x3e;a&#x3a;nth-of-type&#x28;1&#x29;</criteriaValue>
+      </item>
+    </criteriaAttributes>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1024</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web DropDown Selection</name>
+    <type>DropDownSelectionStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <criteria>X-Path</criteria>
+      <value>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;dllUAssetgrp&#x22;&#x5d;</value>
+      <multiple>N</multiple>
+      <index>0</index>
+      <driverName>BROWSER1</driverName>
+      <selectionCriteria>VisibleText</selectionCriteria>
+      <selectionValue>Equity</selectionValue>
+    <criteriaAttributes>
+      <item>
+        <criteria>X-Path</criteria>
+        <criteriaValue>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;dllUAssetgrp&#x22;&#x5d;</criteriaValue>
+      </item>
+      <item>
+        <criteria>Y Co-ordinate</criteria>
+        <criteriaValue>257</criteriaValue>
+      </item>
+      <item>
+        <criteria>X Co-ordinate</criteria>
+        <criteriaValue>12</criteriaValue>
+      </item>
+      <item>
+        <criteria>Class Name</criteria>
+        <criteriaValue>form-control ng-pristine ng-untouched ng-valid ng-not-empty</criteriaValue>
+      </item>
+      <item>
+        <criteria>Id</criteria>
+        <criteriaValue>dllUAssetgrp</criteriaValue>
+      </item>
+      <item>
+        <criteria>Tag Name</criteria>
+        <criteriaValue>SELECT</criteriaValue>
+      </item>
+      <item>
+        <criteria>CSS Selector</criteria>
+        <criteriaValue>html&#x3e;body&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;select&#x3a;nth-of-type&#x28;1&#x29;</criteriaValue>
+      </item>
+    </criteriaAttributes>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web DropDown Selection 2</name>
+    <type>DropDownSelectionStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <criteria>X-Path</criteria>
+      <value>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;dllFilter&#x22;&#x5d;</value>
+      <multiple>N</multiple>
+      <index>0</index>
+      <driverName>BROWSER1</driverName>
+      <selectionCriteria>VisibleText</selectionCriteria>
+      <selectionValue>Index</selectionValue>
+    <criteriaAttributes>
+      <item>
+        <criteria>X-Path</criteria>
+        <criteriaValue>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;dllFilter&#x22;&#x5d;</criteriaValue>
+      </item>
+      <item>
+        <criteria>Y Co-ordinate</criteria>
+        <criteriaValue>257</criteriaValue>
+      </item>
+      <item>
+        <criteria>X Co-ordinate</criteria>
+        <criteriaValue>329</criteriaValue>
+      </item>
+      <item>
+        <criteria>Class Name</criteria>
+        <criteriaValue>form-control ng-valid ng-not-empty ng-touched ng-dirty ng-valid-parse</criteriaValue>
+      </item>
+      <item>
+        <criteria>Id</criteria>
+        <criteriaValue>dllFilter</criteriaValue>
+      </item>
+      <item>
+        <criteria>Tag Name</criteria>
+        <criteriaValue>SELECT</criteriaValue>
+      </item>
+      <item>
+        <criteria>CSS Selector</criteria>
+        <criteriaValue>html&#x3e;body&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;select&#x3a;nth-of-type&#x28;1&#x29;</criteriaValue>
+      </item>
+    </criteriaAttributes>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web DropDown Selection 3</name>
+    <type>DropDownSelectionStep</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <criteria>X-Path</criteria>
+      <value>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;dllFilter2&#x22;&#x5d;</value>
+      <multiple>N</multiple>
+      <index>0</index>
+      <driverName>BROWSER1</driverName>
+      <selectionCriteria>VisibleText</selectionCriteria>
+      <selectionValue>S&#x26;P BSE 100</selectionValue>
+    <criteriaAttributes>
+      <item>
+        <criteria>X-Path</criteria>
+        <criteriaValue>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;dllFilter2&#x22;&#x5d;</criteriaValue>
+      </item>
+      <item>
+        <criteria>Y Co-ordinate</criteria>
+        <criteriaValue>354</criteriaValue>
+      </item>
+      <item>
+        <criteria>X Co-ordinate</criteria>
+        <criteriaValue>13</criteriaValue>
+      </item>
+      <item>
+        <criteria>Class Name</criteria>
+        <criteriaValue>form-control ng-pristine ng-untouched ng-valid ng-not-empty</criteriaValue>
+      </item>
+      <item>
+        <criteria>Id</criteria>
+        <criteriaValue>dllFilter2</criteriaValue>
+      </item>
+      <item>
+        <criteria>Tag Name</criteria>
+        <criteriaValue>SELECT</criteriaValue>
+      </item>
+      <item>
+        <criteria>CSS Selector</criteria>
+        <criteriaValue>html&#x3e;body&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;select&#x3a;nth-of-type&#x28;1&#x29;</criteriaValue>
+      </item>
+    </criteriaAttributes>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>896</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web Set Delay 1</name>
+    <type>SetDelay</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <driverName>BROWSER1</driverName>
+      <delay>10</delay>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Robot Handling 2</name>
+    <type>RobotHandling</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <multiple>N</multiple>
+      <setTextFields>        <field>          <eventList>Keyboard</eventList>
+          <events/>
+          <value>Tab</value>
+        </field>      </setTextFields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web Set Delay</name>
+    <type>SetDelay</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <driverName>BROWSER1</driverName>
+      <delay>10</delay>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web URL Navigation</name>
+    <type>UrlNavigationStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <url>https&#x3a;&#x2f;&#x2f;www.bseindia.com&#x2f;markets&#x2f;Equity&#x2f;EQReports&#x2f;MarketwatchDownloads.aspx</url>
+      <delay>0</delay>
+      <driverName>BROWSER1</driverName>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1232</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web Actions 2</name>
+    <type>WebActionsStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <criteria>X-Path</criteria>
+      <value>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;ContentPlaceHolder1_imgDownload&#x22;&#x5d;&#x2f;I&#x5b;1&#x5d;</value>
+      <multiple>N</multiple>
+      <index>0</index>
+      <destCriteria>X-Path</destCriteria>
+      <destValue/>
+      <destMultiple>N</destMultiple>
+      <destIndex>0</destIndex>
+      <driverName>BROWSER1</driverName>
+      <actions>Right Click</actions>
+      <usingcoord>N</usingcoord>
+      <xCoord>0</xCoord>
+      <yCoord>0</yCoord>
+    <criteriaAttributes>
+      <item>
+        <criteria>X-Path</criteria>
+        <criteriaValue>&#x2f;&#x2f;&#x2a;&#x5b;&#x40;id&#x3d;&#x22;ContentPlaceHolder1_imgDownload&#x22;&#x5d;&#x2f;I&#x5b;1&#x5d;</criteriaValue>
+      </item>
+      <item>
+        <criteria>Y Co-ordinate</criteria>
+        <criteriaValue>410</criteriaValue>
+      </item>
+      <item>
+        <criteria>X Co-ordinate</criteria>
+        <criteriaValue>492</criteriaValue>
+      </item>
+      <item>
+        <criteria>Class Name</criteria>
+        <criteriaValue>fa fa-download iconfont</criteriaValue>
+      </item>
+      <item>
+        <criteria>Tag Name</criteria>
+        <criteriaValue>I</criteriaValue>
+      </item>
+      <item>
+        <criteria>CSS Selector</criteria>
+        <criteriaValue>html&#x3e;body&#x3e;form&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;div&#x3e;a&#x3e;i&#x3a;nth-of-type&#x28;1&#x29;</criteriaValue>
+      </item>
+    </criteriaAttributes>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Get File Names</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <filter>
+      <filterfiletype>only_files</filterfiletype>
+    </filter>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <rownum>N</rownum>
+    <isaddresult>N</isaddresult>
+    <filefield>N</filefield>
+    <rownum_field>RowNumber</rownum_field>
+    <filename_Field/>
+    <wildcard_Field/>
+    <exclude_wildcard_Field/>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <limit>0</limit>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;f16vi&#x5c;Downloads</name>
+      <filemask>Mar.&#x2a;.csv</filemask>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_workflow>N</slave_workflow>
+</transformation>
